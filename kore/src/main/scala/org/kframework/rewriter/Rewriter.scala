@@ -40,5 +40,7 @@ trait Rewriter {
 
   def prove(rules: Module, boundaryPattern: Rule): kore.K
 
+  def bmc(rules: Module): kore.K
+
   def equivalence(firstDef: Rewriter, secondDef: Rewriter, firstSpec: Module, secondSpec: Module): Boolean
 }
